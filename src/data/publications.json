@@ -1,0 +1,74 @@
+[
+  {
+    "title": "BELM: Bidirectional Explicit Linear Multi-step Sampler for Exact Inversion in Diffusion Models",
+    "authors": "Fangyikang Wang, Hubery Yin, Yue-Jiang Dong, Huminhao Zhu, Chao Zhang, Hanbin Zhao, Hui Qian, Chen Li",
+    "venue": "NeurIPS",
+    "year": 2024
+  },
+  {
+    "title": "GAD-PVI: A General Accelerated Dynamic-Weight Particle-based Variational Inference Framework",
+    "authors": "Fangyikang Wang, Huminhao Zhu, Chao Zhang, Hanbin Zhao, Hui Qian",
+    "venue": "AAAI",
+    "year": 2024
+  },
+  {
+    "title": "Efficiently Access Diffusion Fisher: Within the Outer Product Span Space",
+    "authors": "Fangyikang Wang, Hubery Yin, Huminhao Zhu, Shaobin Zhuang, Chao Zhang, Hanbin Zhao, Hui Qian, Chen Li",
+    "venue": "ICML",
+    "year": 2025
+  },
+  {
+    "title": "Unleashing High-Quality Image Generation in Diffusion Sampling Using Second-Order Levenberg-Marquardt-Langevin",
+    "authors": "Fangyikang Wang, Hubery Yin, Huminhao Zhu, Yanlong Tang, Chao Zhang, Hanbin Zhao, Hui Qian, Chen Li",
+    "venue": "ICCV",
+    "year": 2025
+  },
+  {
+    "title": "Convergence Theory of Decentralized Diffusion Models via Pseudo-Non-Markov Analysis",
+    "authors": "Fangyikang Wang, Yue-Jiang Dong, Hubery Yin, Haoxuan Li, Song-Hai Zhang, Chao Zhang, Hanbin Zhao, Hui Qian, Chen Li, Mingming Gong",
+    "venue": "In Submission (ICML)",
+    "year": 2026
+  },
+  {
+    "title": "Video-GPT via Next Clip Diffusion",
+    "authors": "Shaobin Zhuang, Zhipeng Huang, Ying Zhuang, Fangyikang Wang, Canmiao Fu, Binxin Yang, Chong Sun, Chen Li, Yali Wang",
+    "venue": "ICLR",
+    "year": 2026
+  },
+  {
+    "title": "TimeStep Master: Asymmetrical Mixture of Timestep LoRA Experts for Versatile and Efficient Diffusion Models in Vision",
+    "authors": "Shaobin Zhuang, Yiwei Guo, Yanbo Ding, Kunchang Li, Xinyuan Chen, Yaohui Wang, Fangyikang Wang, Ying Zhang, Chen Li, Yali Wang",
+    "venue": "ICML",
+    "year": 2025
+  },
+  {
+    "title": "Analyzing and Improving Model Collapse in Rectified Flow Models",
+    "authors": "Huminhao Zhu, Fangyikang Wang, Tianyu Ding, Qing Qu, Zhihui Zhu",
+    "venue": "CPAL",
+    "year": 2026
+  },
+  {
+    "title": "Neural sinkhorn gradient flow",
+    "authors": "Huminhao Zhu, Fangyikang Wang, Chao Zhang, Hanbin Zhao, Hui Qian",
+    "venue": "arXiv",
+    "year": 2026
+  },
+  {
+    "title": "Rethinking the Diffusion Models for Missing Data Imputation: A Gradient Flow Perspective",
+    "authors": "Zhichao Chen, Haoxuan Li, Fangyikang Wang, Odin Zhang, Hu Xu, Xiaoyu Jiang, Zhihuan Song, Hao Wang",
+    "venue": "NeurIPS",
+    "year": 2024
+  },
+  {
+    "title": "Get In Video: Add Anything You Want to the Video",
+    "authors": "Shaobin Zhuang, Zhipeng Huang, Binxin Yang, Ying Zhang, Fangyikang Wang, Canmiao Fu, Chong Sun, Zheng-Jun Zha, Chen Li, Yali Wang",
+    "venue": "arXiv",
+    "year": 2026
+  },
+  {
+    "title": "Wetok: Powerful discrete tokenization for high-fidelity visual reconstruction",
+    "authors": "Shaobin Zhuang, Yiwei Guo, Fangyikang Wang, Canmiao Fu, Zhipeng Huang, Zeyue Tian, Ying Zhang, Chen Li, Yali Wang",
+    "venue": "ICLR",
+    "year": 2026
+  }
+]

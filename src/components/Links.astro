@@ -1,0 +1,17 @@
+---
+const { scholar, github } = Astro.props;
+---
+
+<section id="links" class="section">
+  <h2>Links</h2>
+  <ul class="list">
+    <li>
+      Google Scholar:
+      <a href={scholar} target="_blank" rel="noreferrer"> {scholar}</a>
+    </li>
+    <li>
+      GitHub:
+      <a href={github} target="_blank" rel="noreferrer"> {github}</a>
+    </li>
+  </ul>
+</section>

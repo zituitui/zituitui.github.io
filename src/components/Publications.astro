@@ -1,0 +1,22 @@
+---
+const { papers = [] } = Astro.props;
+---
+
+<section id="publications" class="section">
+  <h2>Publications</h2>
+  <ul class="list">
+    {
+      papers.map((paper) => (
+        <li>
+          <strong>{paper.title}</strong>
+          <br />
+          {paper.authors}
+          <br />
+          <em>
+            {paper.venue}, {paper.year}
+          </em>
+        </li>
+      ))
+    }
+  </ul>
+</section>
