@@ -1,16 +1,18 @@
 ---
 const { papers = [] } = Astro.props;
+const highlightSelf = (authors) =>
+  authors.replaceAll("Fangyikang Wang", "<u>Fangyikang Wang</u>");
 ---
 
-<section id="publications" class="section">
+<section id="publications" class="section card">
   <h2>Publications</h2>
-  <ul class="list">
+  <ul class="pub-list">
     {
       papers.map((paper) => (
         <li>
           <strong>{paper.title}</strong>
           <br />
-          {paper.authors}
+          <span set:html={highlightSelf(paper.authors)} />
           <br />
           <em>
             {paper.venue}, {paper.year}

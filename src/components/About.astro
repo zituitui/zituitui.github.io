@@ -1,11 +1,18 @@
 ---
-const { photo, summary } = Astro.props;
+const { photo, scholar, github } = Astro.props;
 ---
 
 <section id="about" class="section about">
   <img class="avatar" src={photo} alt="Profile photo" />
-  <div>
-    <h2>About</h2>
-    <p>{summary}</p>
+  <div class="quick-links-panel">
+    <h2>Links</h2>
+    <ul class="quick-links">
+      <li>
+        <a href={scholar} target="_blank" rel="noreferrer">Google Scholar</a>
+      </li>
+      <li>
+        <a href={github} target="_blank" rel="noreferrer">GitHub</a>
+      </li>
+    </ul>
   </div>
 </section>
