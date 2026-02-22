@@ -14,7 +14,13 @@ import "../styles/global.css";
 
 <BaseLayout title={`${profile.name} - Academic Homepage`}>
   <Header name={profile.name} />
-  <About photo={profile.photo} scholar={profile.scholar} github={profile.github} />
+  <About
+    name={profile.name}
+    subtitle={profile.subtitle}
+    photo={profile.photo}
+    scholar={profile.scholar}
+    github={profile.github}
+  />
   <Biography summary={profile.summary} />
   <Education items={education} />
   <Publications papers={publications} />

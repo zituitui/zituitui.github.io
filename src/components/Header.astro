@@ -3,12 +3,14 @@ const { name } = Astro.props;
 ---
 
 <header class="site-header">
-  <h1>{name}</h1>
-  <nav>
-    <a href="#about">Home</a>
-    <a href="#biography">Biography</a>
-    <a href="#education">Education</a>
-    <a href="#publications">Publications</a>
-    <a href="#visitors">Visitors</a>
-  </nav>
+  <div class="site-header-inner">
+    <a class="brand" href="#about">{name}</a>
+    <nav>
+      <a href="#about">about</a>
+      <a href="#biography">biography</a>
+      <a href="#education">education</a>
+      <a href="#publications">publications</a>
+      <a href="#visitors">visitors</a>
+    </nav>
+  </div>
 </header>

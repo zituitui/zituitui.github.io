@@ -4,21 +4,19 @@ const highlightSelf = (authors) =>
   authors.replaceAll("Fangyikang Wang", "<u>Fangyikang Wang</u>");
 ---
 
-<section id="publications" class="section card">
+<section id="publications" class="section publications">
   <h2>Publications</h2>
-  <ul class="pub-list">
+  <ol class="pub-list">
     {
       papers.map((paper) => (
-        <li>
-          <strong>{paper.title}</strong>
-          <br />
-          <span set:html={highlightSelf(paper.authors)} />
-          <br />
-          <em>
-            {paper.venue}, {paper.year}
-          </em>
+        <li class="pub-item">
+          <div class="pub-title">{paper.title}</div>
+          <div class="pub-authors" set:html={highlightSelf(paper.authors)} />
+          <div class="pub-venue">
+            <em>{paper.venue}</em>, {paper.year}
+          </div>
         </li>
       ))
     }
-  </ul>
+  </ol>
 </section>
