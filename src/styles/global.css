@@ -188,6 +188,12 @@ a:hover {
   font-size: 0.95rem;
 }
 
+.about-summary {
+  margin: 0.85rem 0 0;
+  max-width: 60ch;
+  color: var(--global-text-color);
+}
+
 .about {
   position: relative;
 }
@@ -213,10 +219,9 @@ a:hover {
 
 .photo-caption {
   margin: 0.45rem 0 0;
-  padding: 0.3rem 0.55rem;
-  border-radius: 8px;
-  background: rgba(128, 128, 128, 0.5);
-  color: #ffffff;
+  padding: 0.15rem 0;
+  background: transparent;
+  color: rgba(210, 210, 210, 0.7);
   font-size: 0.8rem;
   text-align: center;
 }
@@ -257,7 +262,8 @@ a:hover {
 }
 
 .interest-list {
-  padding: 0 0 0 1.2rem;
+  list-style: none;
+  padding: 0;
 }
 
 .honor-list {

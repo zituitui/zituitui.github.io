@@ -2,17 +2,18 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import About from "../components/About.astro";
-import Biography from "../components/Biography.astro";
 import ResearchInterests from "../components/ResearchInterests.astro";
 import Education from "../components/Education.astro";
 import Honors from "../components/Honors.astro";
 import Publications from "../components/Publications.astro";
+import AcademicServices from "../components/AcademicServices.astro";
 import VisitorCounter from "../components/VisitorCounter.astro";
 import profile from "../data/profile.json";
 import researchInterests from "../data/research-interests.json";
 import education from "../data/education.json";
 import honors from "../data/honors.json";
 import publications from "../data/publications.json";
+import academicServices from "../data/academic-services.json";
 import "../styles/global.css";
 ---
 
@@ -28,11 +29,12 @@ import "../styles/global.css";
     name={profile.name}
     subtitle={profile.subtitle}
     photo={profile.photo}
+    summary={profile.summary}
   />
-  <Biography summary={profile.summary} />
   <ResearchInterests items={researchInterests} />
   <Education items={education} />
   <Honors items={honors} />
   <Publications papers={publications} />
+  <AcademicServices items={academicServices} />
   <VisitorCounter />
 </BaseLayout>
