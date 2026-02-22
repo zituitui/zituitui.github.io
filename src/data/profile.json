@@ -4,5 +4,7 @@
   "photo": "/images/my-picture1.jpg",
   "summary": "I am a machine learning researcher focusing on generative models, diffusion sampling, and particle-based variational inference. I am currently an M.Eng. student in Computer Science at Zhejiang University and was a visiting student in machine learning at Mohamed bin Zayed University of Artificial Intelligence.",
   "scholar": "https://scholar.google.com/citations?hl=en&user=j80akcEAAAAJ",
-  "github": "https://github.com/zituitui"
+  "github": "https://github.com/zituitui",
+  "email": "wangfangyikang@zju.edu.cn",
+  "linkedin": "https://www.linkedin.com/in/fangyikang-wang/"
 }

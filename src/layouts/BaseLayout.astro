@@ -10,13 +10,71 @@ const { title = "Academic Homepage" } = Astro.props;
     <title>{title}</title>
     <meta name="description" content="Personal academic homepage" />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css"
+    />
+    <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%90%B6%3C/text%3E%3C/svg%3E"
     />
+    <script is:inline>
+      (() => {
+        const key = "site-theme";
+        let theme = "light";
+        try {
+          const stored = localStorage.getItem(key);
+          if (stored === "light" || stored === "dark") {
+            theme = stored;
+          } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            theme = "dark";
+          }
+        } catch {
+          if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            theme = "dark";
+          }
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+        document.documentElement.style.colorScheme = theme;
+      })();
+    </script>
   </head>
   <body>
     <main class="container">
       <slot />
     </main>
+    <script is:inline>
+      (() => {
+        const key = "site-theme";
+        const root = document.documentElement;
+        const toggle = document.getElementById("theme-toggle");
+        if (!toggle) return;
+
+        const sync = () => {
+          const isDark = root.getAttribute("data-theme") === "dark";
+          toggle.setAttribute(
+            "aria-label",
+            isDark ? "Switch to light mode" : "Switch to dark mode"
+          );
+          toggle.setAttribute("aria-pressed", String(isDark));
+        };
+
+        sync();
+
+        toggle.addEventListener("click", () => {
+          const isDark = root.getAttribute("data-theme") === "dark";
+          const nextTheme = isDark ? "light" : "dark";
+          root.setAttribute("data-theme", nextTheme);
+          root.style.colorScheme = nextTheme;
+          try {
+            localStorage.setItem(key, nextTheme);
+          } catch {}
+          sync();
+        });
+      })();
+    </script>
   </body>
 </html>

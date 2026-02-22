@@ -1,16 +1,51 @@
 ---
-const { name } = Astro.props;
+const { name, scholar, github, email, linkedin } = Astro.props;
+const socialLinks = [
+  { href: scholar, label: "Google Scholar", iconClass: "ai ai-google-scholar" },
+  { href: github, label: "GitHub", iconClass: "fa-brands fa-github" },
+  { href: email ? `mailto:${email}` : "", label: "Email", iconClass: "fa-solid fa-envelope" },
+  { href: linkedin, label: "LinkedIn", iconClass: "fa-brands fa-linkedin" }
+].filter((item) => Boolean(item.href));
 ---
 
 <header class="site-header">
   <div class="site-header-inner">
     <a class="brand" href="#about">{name}</a>
-    <nav>
-      <a href="#about">about</a>
-      <a href="#biography">biography</a>
-      <a href="#education">education</a>
-      <a href="#publications">publications</a>
-      <a href="#visitors">visitors</a>
-    </nav>
+    <div class="header-actions">
+      <nav class="site-nav">
+        <a href="#about">about</a>
+        <a href="#biography">biography</a>
+        <a href="#education">education</a>
+        <a href="#publications">publications</a>
+        <a href="#visitors">visitors</a>
+      </nav>
+      <div class="social-links" aria-label="External links">
+        {
+          socialLinks.map((item) => (
+            <a
+              class="icon-link"
+              href={item.href}
+              target={item.href.startsWith("mailto:") ? undefined : "_blank"}
+              rel={item.href.startsWith("mailto:") ? undefined : "noreferrer"}
+              aria-label={item.label}
+              title={item.label}
+            >
+              <i class={item.iconClass} aria-hidden="true"></i>
+            </a>
+          ))
+        }
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          type="button"
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+          title="Toggle light/dark mode"
+        >
+          <i class="fa-solid fa-moon moon-icon" aria-hidden="true"></i>
+          <i class="fa-solid fa-sun sun-icon" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
   </div>
 </header>
