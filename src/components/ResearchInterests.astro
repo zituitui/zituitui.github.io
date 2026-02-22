@@ -1,0 +1,14 @@
+---
+const { items = [] } = Astro.props;
+---
+
+<section id="research-interests" class="section research-interests">
+  <h2>Research Interests</h2>
+  <ol class="interest-list">
+    {
+      items.map((item) => (
+        <li class="interest-item">{item}</li>
+      ))
+    }
+  </ol>
+</section>

@@ -95,24 +95,7 @@ body {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 1rem;
-}
-
-.site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.85rem;
-}
-
-.site-nav a {
-  color: var(--global-text-color-light);
-  text-decoration: none;
-  font-size: 0.93rem;
-  letter-spacing: 0.01em;
-}
-
-.site-nav a:hover {
-  color: var(--global-hover-color);
+  justify-content: flex-end;
 }
 
 .social-links {
@@ -228,6 +211,16 @@ a:hover {
   box-shadow: 0 18px 45px -35px var(--header-shadow-color);
 }
 
+.photo-caption {
+  margin: 0.45rem 0 0;
+  padding: 0.3rem 0.55rem;
+  border-radius: 8px;
+  background: rgba(128, 128, 128, 0.5);
+  color: #ffffff;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
 .clearfix::after {
   content: "";
   display: block;
@@ -251,6 +244,8 @@ a:hover {
 }
 
 .education-list,
+.interest-list,
+.honor-list,
 .pub-list {
   margin: 0;
   border-top: 1px solid var(--global-divider-color);
@@ -261,11 +256,22 @@ a:hover {
   padding: 0;
 }
 
+.interest-list {
+  padding: 0 0 0 1.2rem;
+}
+
+.honor-list {
+  list-style: none;
+  padding: 0;
+}
+
 .pub-list {
   padding: 0 0 0 1.15rem;
 }
 
 .edu-item,
+.interest-item,
+.honor-item,
 .pub-item {
   border-bottom: 1px solid var(--global-divider-color);
   padding: 0.92rem 0;
@@ -297,6 +303,25 @@ a:hover {
 .edu-school {
   margin-top: 0.25rem;
   color: var(--global-text-color-light);
+}
+
+.honor-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.honor-title {
+  font-weight: 700;
+}
+
+.honor-year {
+  color: var(--global-text-color-light);
+  font-family: "IBM Plex Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  font-size: 0.82rem;
+  white-space: nowrap;
 }
 
 .pub-title {
@@ -360,8 +385,8 @@ a:hover {
   }
 
   .header-actions {
-    width: 100%;
-    justify-content: space-between;
+    width: auto;
+    justify-content: flex-end;
   }
 }
 
@@ -376,13 +401,7 @@ a:hover {
   }
 
   .header-actions {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.55rem;
-  }
-
-  .site-nav {
-    gap: 0.7rem;
+    width: auto;
   }
 
   .profile.float-right {
@@ -392,6 +411,12 @@ a:hover {
   }
 
   .edu-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+  }
+
+  .honor-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.1rem;
