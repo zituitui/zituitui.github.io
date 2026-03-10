@@ -1,0 +1,12 @@
+---
+const { items = [] } = Astro.props;
+---
+
+<section id="internships" class="section internships">
+  <h2>💻 Internships</h2>
+  <ul class="internship-list">
+    {
+      items.map((item) => <li class="internship-item">{item}</li>)
+    }
+  </ul>
+</section>

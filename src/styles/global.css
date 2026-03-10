@@ -256,6 +256,7 @@ a:hover {
   list-style: disc;
 }
 
+.internship-list,
 .honor-list,
 .service-list {
   margin: 0;
@@ -263,7 +264,7 @@ a:hover {
 }
 
 .service-sublist {
-  margin: 0.08rem 0 0;
+  margin: 0.05rem 0 0;
   padding-left: 1.1rem;
 }
 
@@ -274,10 +275,11 @@ a:hover {
 }
 
 .edu-item,
+.internship-item,
 .honor-item,
 .service-item,
 .service-subitem {
-  padding: 0.18rem 0;
+  padding: 0.11rem 0;
 }
 
 .pub-item {
@@ -287,6 +289,10 @@ a:hover {
 
 .service-title {
   font-weight: 700;
+}
+
+.misc-item + .misc-item {
+  margin-top: 0.45rem;
 }
 
 .pub-title {

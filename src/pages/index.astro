@@ -4,14 +4,18 @@ import Header from "../components/Header.astro";
 import About from "../components/About.astro";
 import Education from "../components/Education.astro";
 import Honors from "../components/Honors.astro";
+import Internships from "../components/Internships.astro";
 import Publications from "../components/Publications.astro";
 import AcademicServices from "../components/AcademicServices.astro";
+import Miscellaneous from "../components/Miscellaneous.astro";
 import VisitorCounter from "../components/VisitorCounter.astro";
 import profile from "../data/profile.json";
 import education from "../data/education.json";
 import honors from "../data/honors.json";
+import internships from "../data/internships.json";
 import publications from "../data/publications.json";
 import academicServices from "../data/academic-services.json";
+import miscellaneous from "../data/miscellaneous.json";
 import "../styles/global.css";
 ---
 
@@ -30,7 +34,9 @@ import "../styles/global.css";
   />
   <Education items={education} />
   <Honors items={honors} />
+  <Internships items={internships} />
   <Publications papers={publications} />
   <AcademicServices items={academicServices} />
+  <Miscellaneous items={miscellaneous} />
   <VisitorCounter />
 </BaseLayout>
