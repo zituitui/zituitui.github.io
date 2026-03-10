@@ -310,7 +310,7 @@ a:hover {
 
 .misc-figure {
   margin: 0;
-  width: min(240px, 36%);
+  width: min(430px, 55%);
 }
 
 .misc-image {
@@ -406,7 +406,7 @@ a:hover {
   }
 
   .misc-figure {
-    width: min(230px, 100%);
+    width: min(410px, 100%);
   }
 
 }
