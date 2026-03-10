@@ -1,5 +1,15 @@
 ---
-const { name, subtitle, photo, summary } = Astro.props;
+const { name, photo, summary } = Astro.props;
+const renderInlineMarkdown = (text) =>
+  text.replace(
+    /\[([^\]]+)\]\(([^)]+)\)/g,
+    '<a href="$2" target="_blank" rel="noreferrer">$1</a>'
+  );
+const summaryParagraphs = summary
+  .split(/\n\s*\n/)
+  .map((paragraph) => paragraph.trim())
+  .filter(Boolean)
+  .map((paragraph) => renderInlineMarkdown(paragraph));
 ---
 
 <section id="about" class="post about">
@@ -9,8 +19,11 @@ const { name, subtitle, photo, summary } = Astro.props;
   </div>
   <header class="post-header">
     <h1 class="post-title">{name}</h1>
-    <p class="post-description">{subtitle}</p>
-    <p class="about-summary">{summary}</p>
+    {
+      summaryParagraphs.map((paragraph) => (
+        <p class="about-summary" set:html={paragraph} />
+      ))
+    }
   </header>
   <div class="clearfix"></div>
 </section>
