@@ -291,8 +291,13 @@ a:hover {
   font-weight: 700;
 }
 
-.misc-item + .misc-item {
-  margin-top: 0.45rem;
+.misc-list {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.misc-item {
+  padding: 0.11rem 0;
 }
 
 .pub-title {
