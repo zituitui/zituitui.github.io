@@ -3,18 +3,10 @@ const { items = [] } = Astro.props;
 ---
 
 <section id="education" class="section education">
-  <h2>Education</h2>
+  <h2>🎓Education</h2>
   <ul class="education-list">
     {
-      items.map((item) => (
-        <li class="edu-item">
-          <div class="edu-main">
-            <span class="edu-degree">{item.degree}</span>
-            <span class="edu-period">{item.period}</span>
-          </div>
-          <div class="edu-school">{item.school}</div>
-        </li>
-      ))
+      items.map((item) => <li class="edu-item">{item}</li>)
     }
   </ul>
 </section>

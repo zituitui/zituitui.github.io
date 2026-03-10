@@ -250,10 +250,10 @@ a:hover {
 }
 
 .education-list {
-  list-style: none;
   margin: 0;
-  padding: 0;
+  padding-left: 1.15rem;
   border-top: none;
+  list-style: disc;
 }
 
 .honor-list,
@@ -283,30 +283,6 @@ a:hover {
 .pub-item {
   border-bottom: 1px solid var(--global-divider-color);
   padding: 0.92rem 0 0.92rem 0.1rem;
-}
-
-.edu-main {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.8rem;
-}
-
-.edu-degree {
-  font-weight: 700;
-}
-
-.edu-period {
-  color: var(--global-text-color-light);
-  font-family: "IBM Plex Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-  font-size: 0.82rem;
-  white-space: nowrap;
-}
-
-.edu-school {
-  margin-top: 0.08rem;
-  color: var(--global-text-color-light);
 }
 
 .service-title {
@@ -383,12 +359,6 @@ a:hover {
     float: none;
     width: min(250px, 100%);
     margin: 0 0 0.8rem;
-  }
-
-  .edu-main {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.1rem;
   }
 
 }
