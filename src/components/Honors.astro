@@ -1,18 +1,12 @@
 ---
 const { items = [] } = Astro.props;
-const sortedItems = [...items].sort((a, b) => b.year - a.year);
 ---
 
 <section id="honors" class="section honors">
   <h2>Honors</h2>
   <ul class="honor-list">
     {
-      sortedItems.map((item) => (
-        <li class="honor-item">
-          <span class="honor-title">{item.title}</span>
-          <span class="honor-year">{item.year}</span>
-        </li>
-      ))
+      items.map((item) => <li class="honor-item">{item}</li>)
     }
   </ul>
 </section>

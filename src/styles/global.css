@@ -249,12 +249,22 @@ a:hover {
   margin: 0;
 }
 
-.education-list,
-.honor-list {
+.education-list {
   list-style: none;
   margin: 0;
   padding: 0;
   border-top: none;
+}
+
+.honor-list,
+.service-list {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.service-sublist {
+  margin: 0.18rem 0 0;
+  padding-left: 1.1rem;
 }
 
 .pub-list {
@@ -264,7 +274,9 @@ a:hover {
 }
 
 .edu-item,
-.honor-item {
+.honor-item,
+.service-item,
+.service-subitem {
   padding: 0.38rem 0;
 }
 
@@ -297,23 +309,8 @@ a:hover {
   color: var(--global-text-color-light);
 }
 
-.honor-item {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.honor-title {
+.service-title {
   font-weight: 700;
-}
-
-.honor-year {
-  color: var(--global-text-color-light);
-  font-family: "IBM Plex Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-  font-size: 0.82rem;
-  white-space: nowrap;
 }
 
 .pub-title {
@@ -394,9 +391,4 @@ a:hover {
     gap: 0.1rem;
   }
 
-  .honor-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.1rem;
-  }
 }

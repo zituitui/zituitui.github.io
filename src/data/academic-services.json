@@ -1,3 +1,11 @@
 [
-  "Reviewer: NeurIPS '24&25, ICLR '25&26, ICML '25&26, CVPR '26"
+  {
+    "title": "Conference Reviewer",
+    "items": [
+      "NeurIPS 2024-2025",
+      "ICLR 2025-2026",
+      "ICML 2025-2026",
+      "CVPR 2026"
+    ]
+  }
 ]

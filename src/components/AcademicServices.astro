@@ -4,9 +4,20 @@ const { items = [] } = Astro.props;
 
 <section id="academic-services" class="section academic-services">
   <h2>Academic Services</h2>
-  {
-    items.map((item) => (
-      <p>{item}</p>
-    ))
-  }
+  <ul class="service-list">
+    {
+      items.map((item) => (
+        <li class="service-item">
+          <span class="service-title">{item.title}:</span>
+          <ul class="service-sublist">
+            {
+              item.items.map((entry) => (
+                <li class="service-subitem">{entry}</li>
+              ))
+            }
+          </ul>
+        </li>
+      ))
+    }
+  </ul>
 </section>
