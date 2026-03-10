@@ -4,9 +4,15 @@ const { items = [] } = Astro.props;
 
 <section id="miscellaneous" class="section miscellaneous">
   <h2>✈️Miscellaneous</h2>
-  <ul class="misc-list">
-    {
-      items.map((item) => <li class="misc-item">{item}</li>)
-    }
-  </ul>
+  <div class="misc-content">
+    <ul class="misc-list">
+      {
+        items.map((item) => <li class="misc-item">{item}</li>)
+      }
+    </ul>
+    <figure class="misc-figure">
+      <img class="misc-image" src="/images/footpin.png" alt="Footprint map" loading="lazy" />
+      <figcaption class="misc-caption">my footprint map</figcaption>
+    </figure>
+  </div>
 </section>
